@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Geist } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -14,7 +17,7 @@ const satoshi = localFont({
   variable: "--font-satoshi",
   src: [
     {
-      path: "../public/font/Satoshi-Regular.otf",
+      path: "../public/font/Satoshi-Light.otf",
       weight: "400",
       style: "normal",
     },
@@ -45,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${satoshi.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", poppins.variable, satoshi.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
