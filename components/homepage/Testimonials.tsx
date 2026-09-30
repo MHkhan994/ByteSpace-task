@@ -4,6 +4,7 @@ import testimonialsData from "../uiData/testimonials";
 const Testimonials = () => {
   return (
     <section className="relative overflow-hidden bg-shuttle-gray-50 py-24 text-dark">
+      {/* gradient shapes */}
       <div className="absolute left-1/2 -translate-x-1/2 -top-80 size-240 career-growth-gradient-green opacity-60 blur-[100px]" />
       <div className="absolute -right-142 top-1/2 -translate-y-1/2 size-284 career-growth-gradient-green opacity-40 blur-[120px]" />
       <div className="absolute -left-142 -bottom-142 size-284 career-growth-gradient-blue opacity-30 blur-[120px]" />
