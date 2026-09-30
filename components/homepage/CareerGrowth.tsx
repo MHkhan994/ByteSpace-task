@@ -6,6 +6,7 @@ import coursesData from "../uiData/courses";
 import CourseCard from "./CourseCard";
 import { Progress } from "../ui/progress";
 import { Button } from "../ui/button";
+import Reveal from "../common/Reveal";
 
 const stats = [
   { value: "12K", label: "Students" },
@@ -37,7 +38,7 @@ const CareerGrowth = () => {
 
       <div className="my-container relative space-y-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
+          <Reveal>
             <h2 className="max-w-md text-3xl font-semibold md:text-[44px]  text-shuttle-gray-950">
               Your Path to Professional Growth Starts Here!
             </h2>
@@ -58,9 +59,9 @@ const CareerGrowth = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
 
-          <div className={stageWrapper}>
+          <Reveal delay={0.1} className={stageWrapper}>
             <div className={stage}>
               <CourseCard
                 course={coursesData.courses[0]}
@@ -85,11 +86,11 @@ const CareerGrowth = () => {
                 className="absolute -right-12 top-52 shadow-none w-58 h-34.5"
               />
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className={`${stageWrapper} order-last lg:order-first`}>
+          <Reveal className={`${stageWrapper} order-last lg:order-first`}>
             <div className={stage}>
               <Image
                 src="/squiggle-shape.png"
@@ -129,9 +130,9 @@ const CareerGrowth = () => {
               </div>
               <HappyStudentsCard className="absolute left-70 bottom-12 z-40" />
             </div>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={0.1}>
             <h2 className="max-w-md text-3xl font-semibold md:text-[2.5rem] md:leading-tight">
               Create &amp; Manage Courses Easily.
             </h2>
@@ -154,7 +155,7 @@ const CareerGrowth = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

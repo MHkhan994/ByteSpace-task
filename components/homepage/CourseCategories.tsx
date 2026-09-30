@@ -1,10 +1,11 @@
 import categoryData from "../uiData/category";
 import CategoryFilter from "./CategoryFilter";
+import Reveal from "../common/Reveal";
 
 const CourseCategories = () => {
   return (
     <section className="bg-white pt-24 pb-12 text-dark">
-      <div className="my-container">
+      <Reveal className="my-container">
         <h2 className="mx-auto max-w-xl text-center text-3xl font-semibold md:text-[2.5rem] md:leading-tight">
           {categoryData.heading}
         </h2>
@@ -13,7 +14,7 @@ const CourseCategories = () => {
         </p>
 
         <CategoryFilter categories={categoryData.categories} />
-      </div>
+      </Reveal>
     </section>
   );
 };

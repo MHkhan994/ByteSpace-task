@@ -4,7 +4,7 @@ import LearningProgressCard from "../shared/LearningProgressCard";
 
 const HeroShowcase = () => {
   return (
-    <div className="relative mt-12 h-42 sm:h-72 md:h-96 lg:h-120 w-full overflow-hidden">
+    <div className="motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-10 duration-1000 ease-out fill-mode-both delay-300 relative mt-12 h-42 sm:h-72 md:h-96 lg:h-120 w-full overflow-hidden">
       <div className="absolute bottom-0 left-1/2 h-120 w-laptop -translate-x-1/2 origin-bottom scale-[0.35] sm:scale-60 md:scale-80 lg:scale-100 text-dark">
         <div className="absolute left-1/2 -translate-x-1/2 top-7.5 size-287.5 rounded-full bg-primary" />
 
@@ -46,7 +46,7 @@ const HeroShowcase = () => {
           className="absolute bottom-0 left-1/2 -translate-x-1/2"
         />
 
-        <div className="absolute left-67.5 top-28 rounded-xl bg-white px-4 py-3 shadow-lg">
+        <div className="motion-safe:animate-float absolute left-67.5 top-28 rounded-xl bg-white px-4 py-3 shadow-lg">
           <p className="font-medium">UI/UX Design</p>
           <p className="mt-0.5 flex items-center gap-2 text-xs text-light-gray">
             200 Courses
@@ -55,9 +55,9 @@ const HeroShowcase = () => {
           </p>
         </div>
 
-        <HappyStudentsCard className="absolute left-50 top-75" />
+        <HappyStudentsCard className="motion-safe:animate-float [animation-delay:-2s] absolute left-50 top-75" />
 
-        <LearningProgressCard progress={55} className="absolute left-172.5 top-32" />
+        <LearningProgressCard progress={55} className="motion-safe:animate-float [animation-delay:-4s] absolute left-172.5 top-32" />
       </div>
     </div>
   );
