@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Geist } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import { cn } from "@/lib/utils";
 
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

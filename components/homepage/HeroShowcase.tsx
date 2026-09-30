@@ -1,22 +1,6 @@
-import { Star } from "lucide-react";
 import Image from "next/image";
-import {
-  Avatar,
-  AvatarGroup,
-  AvatarGroupCount,
-  AvatarImage,
-} from "../ui/avatar";
-
-const studentAvatars = [
-  "/assets/avatars/avatar-1.png",
-  "/assets/avatars/avatar-2.png",
-  "/assets/avatars/avatar-3.png",
-  "/assets/avatars/avatar-4.png",
-  "/assets/avatars/avatar-5.png",
-  "/assets/avatars/avatar-6.png",
-];
-
-const progress = 55;
+import HappyStudentsCard from "../shared/HappyStudentsCard";
+import LearningProgressCard from "../shared/LearningProgressCard";
 
 const HeroShowcase = () => {
   return (
@@ -71,34 +55,9 @@ const HeroShowcase = () => {
           </p>
         </div>
 
-        <div className="absolute left-50 top-75 rounded-2xl bg-white p-4 shadow-lg">
-          <p className="font-medium">Happy Students</p>
-          <p className="mt-0.5 flex items-center gap-1 text-xs text-light-gray">
-            4.8 (240)
-            <Star size={12} className="fill-amber-400 text-amber-400" />
-          </p>
-          <AvatarGroup className="mt-3">
-            {studentAvatars.map((src) => (
-              <Avatar key={src} size="lg">
-                <AvatarImage src={src} alt="" />
-              </Avatar>
-            ))}
-            <AvatarGroupCount className="bg-primary text-xs font-bold text-dark">
-              2K+
-            </AvatarGroupCount>
-          </AvatarGroup>
-        </div>
+        <HappyStudentsCard className="absolute left-50 top-75" />
 
-        <div className="absolute left-172.5 top-32 w-55 rounded-2xl bg-white p-5 shadow-lg">
-          <p className="text-sm">Learning Progress</p>
-          <p className="mt-3 text-4xl font-medium">{progress}%</p>
-          <div className="mt-4 h-1.5 w-full rounded-full bg-shuttle-gray-100">
-            <div
-              className="h-full rounded-full bg-primary"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-        </div>
+        <LearningProgressCard progress={55} className="absolute left-172.5 top-32" />
       </div>
     </div>
   );
