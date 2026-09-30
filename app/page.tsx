@@ -3,6 +3,7 @@ import FeaturedCourses from "@/components/homepage/FeaturedCourses";
 import CareerGrowth from "@/components/homepage/CareerGrowth";
 import CreatorCta from "@/components/homepage/CreatorCta";
 import Hero from "@/components/homepage/Hero";
+import Testimonials from "@/components/homepage/Testimonials";
 import LearningPaths from "@/components/homepage/LearningPaths";
 import PartnerLogos from "@/components/homepage/PartnerLogos";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <LearningPaths />
       <CareerGrowth />
       <CreatorCta />
+      <Testimonials />
     </div>
   );
 }
