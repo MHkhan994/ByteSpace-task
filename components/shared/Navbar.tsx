@@ -12,13 +12,25 @@ const Navbar = () => {
   return (
     <div className="absolute top-0 z-30 w-full">
       <div className="grid grid-cols-3 items-center my-container h-30">
-        <Image
-          src="/assets/logo/logo.svg"
-          className="h-10 w-fit"
-          alt="Logo"
-          width={270}
-          height={80}
-        />
+        <Link href={"/"}>
+          {!showLogoOnly ? (
+            <Image
+              src="/assets/logo/logo.svg"
+              className="h-10 w-fit"
+              alt="Logo"
+              width={270}
+              height={80}
+            />
+          ) : (
+            <Image
+              src="/assets/logo/favicon.svg"
+              className="h-9 w-fit"
+              alt="Logo"
+              width={270}
+              height={80}
+            />
+          )}
+        </Link>
 
         {!showLogoOnly && (
           <>

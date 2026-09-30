@@ -1,9 +1,11 @@
-import BriefcaseIcon from "../svgs/learningPaths/BriefcaseIcon";
-import DesignIcon from "../svgs/learningPaths/DesignIcon";
-import DevelopmentIcon from "../svgs/learningPaths/DevelopmentIcon";
-import MegaphoneIcon from "../svgs/learningPaths/MegaphoneIcon";
-import MonitorIcon from "../svgs/learningPaths/MonitorIcon";
-import PhotographyIcon from "../svgs/learningPaths/PhotographyIcon";
+import {
+  BriefcaseIcon,
+  DesignIcon,
+  DevelopmentIcon,
+  MegaphoneIcon,
+  MonitorIcon,
+  PhotographyIcon,
+} from "../svgs";
 
 const learningPathsData = {
   heading: "Explore Diverse Learning Paths at Bytespace",

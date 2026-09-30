@@ -6,10 +6,12 @@ import Hero from "@/components/homepage/Hero";
 import Testimonials from "@/components/homepage/Testimonials";
 import LearningPaths from "@/components/homepage/LearningPaths";
 import PartnerLogos from "@/components/homepage/PartnerLogos";
+import ScrollProgressBar from "@/components/common/ScrollProgressBar";
 
 export default function Home() {
   return (
     <div>
+      <ScrollProgressBar />
       <Hero />
       <PartnerLogos />
       <CourseCategories />
