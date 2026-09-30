@@ -1,5 +1,6 @@
 import { ChartNoAxesColumnIncreasing, Star } from "lucide-react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import {
   Avatar,
   AvatarGroup,
@@ -16,7 +17,13 @@ const studentAvatars = [
   "/assets/avatars/avatar-3.png",
 ];
 
-const CourseCard = ({ course }: { course: Course }) => {
+const CourseCard = ({
+  course,
+  className,
+}: {
+  course: Course;
+  className?: string;
+}) => {
   const stats = [
     `${course.lessons} Lessons`,
     course.duration,
@@ -24,7 +31,12 @@ const CourseCard = ({ course }: { course: Course }) => {
   ];
 
   return (
-    <article className="rounded-2xl border border-shuttle-gray-100 bg-white p-3 transition-shadow hover:shadow-lg">
+    <article
+      className={cn(
+        "rounded-2xl border border-shuttle-gray-100 bg-white p-3 transition-shadow hover:shadow-lg",
+        className,
+      )}
+    >
       <div className="relative aspect-video overflow-hidden rounded-xl">
         <Image
           src={course.image}
