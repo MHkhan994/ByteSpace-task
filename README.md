@@ -2,6 +2,8 @@
 
 Landing page and auth screens for ByteSpace, an online course platform. Built with Next.js 16, Tailwind CSS v4 and shadcn/ui.
 
+**Live:** [byte-space-task.vercel.app](https://byte-space-task.vercel.app/)
+
 ## Pages
 
 - `/` — homepage (hero, categories, featured courses, learning paths, career growth, creator CTA, testimonials)
