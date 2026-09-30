@@ -7,8 +7,8 @@ import Navbar from "@/components/shared/Navbar";
 import { cn } from "@/lib/utils";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "lenis/react";
-import ScrollProgressBar from "@/components/common/ScrollProgressBar";
 import MotionProvider from "@/components/common/MotionProvider";
+import { Toaster } from "@/components/ui/toast";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -64,12 +64,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <ReactLenis root />
-        <ScrollProgressBar />
         <MotionProvider>
           <Navbar />
           {children}
           <Footer />
         </MotionProvider>
+        <Toaster />
       </body>
     </html>
   );
