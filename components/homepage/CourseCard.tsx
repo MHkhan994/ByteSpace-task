@@ -33,7 +33,7 @@ const CourseCard = ({
   return (
     <article
       className={cn(
-        "rounded-2xl border border-shuttle-gray-100 bg-white p-3 transition-shadow hover:shadow-lg",
+        "rounded-2xl border border-shuttle-gray-100 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:shadow-lg",
         className,
       )}
     >

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import testimonialsData from "../uiData/testimonials";
+import Reveal from "../common/Reveal";
 
 const Testimonials = () => {
   return (
@@ -10,19 +11,20 @@ const Testimonials = () => {
       <div className="absolute -left-142 -bottom-142 size-284 career-growth-gradient-blue opacity-30 blur-[120px]" />
 
       <div className="my-container relative">
-        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
+        <Reveal className="grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
           <h2 className="max-w-md text-3xl font-semibold md:text-[2.75rem] md:leading-tight">
             {testimonialsData.heading}
           </h2>
           <p className="text-shuttle-gray-700 font-normal text-lg">
             {testimonialsData.description}
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3 lg:gap-10">
-          {testimonialsData.testimonials.map((testimonial) => (
-            <div
+          {testimonialsData.testimonials.map((testimonial, index) => (
+            <Reveal
               key={testimonial.id}
+              delay={index * 0.08}
               className="rounded-[24px] bg-white p-6 shadow-sm space-y-6"
             >
               <Image
@@ -39,7 +41,7 @@ const Testimonials = () => {
               <blockquote className="text-shuttle-gray-700 text-lg">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

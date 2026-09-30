@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Reveal from "../common/Reveal";
 
 const CreatorCta = () => {
   return (
@@ -56,7 +57,7 @@ const CreatorCta = () => {
         />
       </div>
 
-      <div className="my-container relative text-center space-y-10">
+      <Reveal className="my-container relative text-center space-y-10">
         <h2 className="mx-auto max-w-2xl text-3xl font-semibold md:text-[2.5rem]">
           Unlock Your Potential as a Creator with ByteSpace
         </h2>
@@ -73,7 +74,7 @@ const CreatorCta = () => {
         >
           Join as Creator
         </Button>
-      </div>
+      </Reveal>
     </section>
   );
 };

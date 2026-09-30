@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
+import Reveal from "../common/Reveal";
 
 const hiddenRoutes = ["/login", "/signup"];
 
@@ -20,7 +21,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white pt-20 pb-8 text-dark">
-      <div className="my-container">
+      <Reveal y={16} className="my-container">
         <div className="grid gap-14 lg:grid-cols-2">
           <div className="max-w-lg">
             <Image
@@ -84,7 +85,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Reveal>
     </footer>
   );
 };
