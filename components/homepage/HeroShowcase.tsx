@@ -1,5 +1,11 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
+import {
+  Avatar,
+  AvatarGroup,
+  AvatarGroupCount,
+  AvatarImage,
+} from "../ui/avatar";
 
 const studentAvatars = [
   "/assets/avatars/avatar-1.png",
@@ -71,21 +77,16 @@ const HeroShowcase = () => {
             4.8 (240)
             <Star size={12} className="fill-amber-400 text-amber-400" />
           </p>
-          <div className="mt-3 flex items-center">
+          <AvatarGroup className="mt-3">
             {studentAvatars.map((src) => (
-              <Image
-                key={src}
-                src={src}
-                alt=""
-                width={40}
-                height={40}
-                className="-ml-2 first:ml-0 size-10 rounded-full border-2 border-white object-cover"
-              />
+              <Avatar key={src} size="lg">
+                <AvatarImage src={src} alt="" />
+              </Avatar>
             ))}
-            <span className="-ml-2 flex size-10 items-center justify-center rounded-full border-2 border-white bg-primary text-xs font-bold">
+            <AvatarGroupCount className="bg-primary text-xs font-bold text-dark">
               2K+
-            </span>
-          </div>
+            </AvatarGroupCount>
+          </AvatarGroup>
         </div>
 
         <div className="absolute left-172.5 top-32 w-55 rounded-2xl bg-white p-5 shadow-lg">
